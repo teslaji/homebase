@@ -1,2 +1,2 @@
 # homebase
-Python Wrapper for Homebase UK Search API.
+Python Wrapper for Companies House UK Search API.
