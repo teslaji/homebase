@@ -1,8 +1,31 @@
-<html>
-  <head>
-    <title>Home</title>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>{% block title%} Companies House UK {% endblock title %}</title>
+
+      {% block styling %}
+      <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
+      {% endblock styling%}
+
+    </head>
     <body>
-      <h1>{{message}}</h1>
-    </body>
-  </head>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">Companies Home UK</a>
+
+        </div>
+      </div>
+    </div>
+    <h1>{{message}}</h1>
+
+    {% block Javascript %}
+      <script src="{% static  'jquery.min.js'%}"></script>
+      <script src= "{% static  'bootstrap/js/bootstrap.min.js'%}"></script>
+    {% endblock Javascript %}
+  </body>
 </html>
